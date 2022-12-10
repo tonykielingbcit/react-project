@@ -1,12 +1,18 @@
-import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "../styles/individual.css";
 
 const Individual = () => {
-    let { id } = useParams();
-    console.log("id:::::::::::", id);
+    const location = useLocation();
+    const movie = JSON.parse(location.state.movie);
+    const { title, release_date, vote_average, overview } = movie;
+    
+    // console.log("id:::::::::::", id, movie);
     return(
         <section>
-            This is individual, title id: {id ?? "'actually, so far, no title'"} 
+            <p>{ title }</p>
+            <p>{ vote_average }</p>
+            <p>{ release_date }</p>
+            <p>{ overview }</p>
         </section>
     );
 }

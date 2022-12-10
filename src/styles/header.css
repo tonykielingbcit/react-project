@@ -8,7 +8,7 @@ header {
     justify-content: space-between;
 }
 
-.three-items, .last-item {
+.left-side, .right-side {
     display: flex;
     margin: 0 1rem;
 }

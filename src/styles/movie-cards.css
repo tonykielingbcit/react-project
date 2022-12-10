@@ -1,0 +1,28 @@
+
+.mc-frame {
+    border: 1px solid greenyellow;
+    display: flex;
+}
+
+
+.mc-info-box {
+    width: 60%;
+    height: 40%;
+    border: 1px solid red;
+}
+
+
+figure {
+    width: 200px;
+    border: 1px solid lightgreen;
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.info-items {
+    margin: 0;
+    padding: 0;
+}

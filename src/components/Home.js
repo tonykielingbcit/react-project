@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../styles/home.css";
 import env from "react-dotenv";
+import MovieCards from "./MovieCards";
 
 const Home = () => {
     const [titles, setTitles] = useState();
@@ -21,31 +22,28 @@ const Home = () => {
 
     const MoviesList = () => {
         let temp = [];
-        
-        if (titles && titles.length > 0)
-            temp = titles.map((e, i) => {
-                return (
-                    <div key={i} style={{border: "1px solid blue", margin: "1rem 0"}}>
-                        <p>Id: { e.id }</p>
-                        <p>Name: { e.title }</p>
-                        <figure>
-                            <img src = {`https://image.tmdb.org/t/p/w300/${e.poster_path}`} alt={e.title} />
-                        </figure>
-                    </div>
-                );
-            });
 
+        if (titles && titles.length > 0)
+            // in order to get exact 12 movies at a time
+            for(let c = 0; c < 12; c++)
+                temp.push (
+                    <MovieCards
+                        movie = { titles[c] }
+                        key = { c }
+                        index = { c }
+                    />
+                );
+            
+            
         return temp;
     }
 
     return(
-        <div>
-            <p>Hello and welcome for the Home page!</p>
-    
+        <article className = "hm-cards-frame">
             {
                 <MoviesList />
             }
-        </div>
+        </article>
     );
 }
 
