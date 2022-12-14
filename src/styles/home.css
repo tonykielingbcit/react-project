@@ -1,75 +1,20 @@
-/* figure {
-    width: 200px;
-    border: 1px solid lightgreen;
-    padding: 0.5rem;
-} */
 
 .hm-cards-frame {
-    width: 100%;
-    /* border: 3px solid blue; */
-    border-radius: 5px;
+    padding: 1.5rem;
     display: grid;
+    grid-gap: 2rem;
+    margin-inline: auto;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0.5rem;
-    grid-template-areas: 
-        "i01 i02 i03"
-        "i04 i05 i06"
-        "i07 i08 i09"
-        "i10 i11 i12"
-    ;
 }
 
-.items {
-    width: 400px;
-    /* height: 40%; */
-    background-color: grey;
+@media only screen and (max-width: 1050px) {
+    .hm-cards-frame {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.item01 {
-    grid-area: i01;
+@media only screen and (max-width: 620px) {
+    .hm-cards-frame {
+        grid-template-columns: 1fr;
+    }
 }
-
-.item02 {
-    grid-area: i02;
-}
-
-.item03 {
-    grid-area: i03;
-}
-
-.item04 {
-    grid-area: i04;
-}
-
-.item05 {
-    grid-area: i05;
-}
-
-.item06 {
-    grid-area: i06;
-}
-
-.item07 {
-    grid-area: i07;
-}
-
-.item08 {
-    grid-area: i08;
-}
-
-.item09 {
-    grid-area: i09;
-}
-
-.item10 {
-    grid-area: i10;
-}
-
-.item11 {
-    grid-area: i11;
-}
-
-.item12 {
-    grid-area: i12;
-}
-

@@ -41,7 +41,8 @@ const Home = () => {
     return(
         <article className = "hm-cards-frame">
             {
-                <MoviesList />
+                <MoviesList 
+                />
             }
         </article>
     );
