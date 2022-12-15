@@ -1,12 +1,23 @@
 import "../styles/header.css";
 import { NavLink, useLocation } from "react-router-dom";
+import Icon from "../graphics/icon.png";
 
 const Header = () => {
     const currentLocation = useLocation().pathname;
-    console.log("currentLocation:: ", currentLocation);
+    
     return(
         <header>
             <section className = "left-side">
+                <a 
+                    href="/"
+                    title = "Home"
+                >
+                    {/* https://iconarchive.com/show/hobbies-icons-by-hadezign/Movies-icon.html */}
+                    <figure className = "icon-container">
+                        <img src={Icon} alt = "Site's icon"/>
+                    </figure>
+                </a> 
+                
                 <a 
                     href="/" 
                     className = {`single-item ${(currentLocation === "/" ? "is-active" : "")}`}
@@ -21,9 +32,8 @@ const Header = () => {
                 >
                     My Favourites
                 </NavLink>
-
-
             </section>
+
             <section className="right-side">
                 <NavLink
                     to = "/about"

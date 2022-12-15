@@ -125,7 +125,8 @@ const Home = () => {
             return (
                 <select 
                     onChange = {handleMovieListOptions}
-                    className = "hm-drop-down" 
+                    className = "hm-drop-down"
+                    title = "Select Movie list type"
                 >
                     <option key={currentDropDownOption.key} value={currentDropDownOption.label}> { currentDropDownOption.label } </option>
                         {dropdownOptions.map((item, i) => <option key={i} value={item.label}> {item.label} </option>)}

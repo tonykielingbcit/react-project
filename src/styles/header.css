@@ -14,7 +14,8 @@ header {
 
 .left-side, .right-side {
     display: flex;
-    margin: 0 1rem;
+    /* margin: 0 1rem; */
+    /* border: lime 1px solid; */
 }
 
 .single-item {
@@ -37,4 +38,18 @@ header {
     background-color: lightgray;
     color: blue;
     border-radius: 5px;
+}
+
+.icon-container {
+    display: flex;
+    /* justify-content: center; */
+    height: 100%;
+    margin: 0 1rem;
+    padding: 0;
+    /* border: 1px solid red; */
+    -webkit-transform:rotate(340deg);
+    -moz-transform: rotate(340deg);
+    -ms-transform: rotate(340deg);
+    -o-transform: rotate(340deg);
+    transform: rotate(340deg);
 }
