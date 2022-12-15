@@ -22,11 +22,18 @@ header {
     padding: 0 1rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     color: inherit;
     text-decoration: inherit;
 }
 
 .single-item:hover {
+    background-color: lightgray;
+    color: blue;
+    border-radius: 5px;
+}
+
+.is-active {
     background-color: lightgray;
     color: blue;
     border-radius: 5px;

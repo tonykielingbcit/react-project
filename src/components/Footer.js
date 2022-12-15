@@ -4,7 +4,7 @@ const Footer = () => {
 
     return(
         <footer>
-            This is footer
+            &#174; BCIT React Assignment - 2022
         </footer>
     );
 }

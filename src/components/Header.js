@@ -1,22 +1,36 @@
 import "../styles/header.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
-
+    const currentLocation = useLocation().pathname;
+    console.log("currentLocation:: ", currentLocation);
     return(
         <header>
             <section className = "left-side">
-                {/* <Link to = "/" className = "single-item">Home</Link> */}
-                <a href="/" className = "single-item">Home</a>
-                <Link to = "/favourites" className = "single-item">My Favourites</Link>
+                <a 
+                    href="/" 
+                    className = {`single-item ${(currentLocation === "/" ? "is-active" : "")}`}
+
+                >
+                    Home
+                </a>
+
+                <NavLink 
+                    to = "/favourites" 
+                    className = {`single-item ${(currentLocation === "/favourites" ? "is-active" : "")}`}
+                >
+                    My Favourites
+                </NavLink>
+
+
             </section>
             <section className="right-side">
-                <Link to = "/about" className = "single-item">About</Link>
-                {/* <NavLink
+                <NavLink
                     to = "/about"
+                    className = {`single-item ${(currentLocation === "/about" ? "is-active" : "")}`}
                 >
                     About
-                </NavLink> */}
+                </NavLink>
             </section>
         </header>
     );

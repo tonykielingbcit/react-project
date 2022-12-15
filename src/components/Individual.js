@@ -8,8 +8,6 @@ import { useState } from "react";
 const Individual = () => {
     const location = useLocation();
     const { movie } = location.state;
-    // const { id, title, release_date, vote_average, overview, poster_path, backdrop_path, isFavourite } = movie;
-
     const [currentMovie, setCurrentMovie] = useState(null);
 
     useState(() => {
@@ -44,7 +42,6 @@ const Individual = () => {
                         <div className = "i-info-container-title">
                             <p className = "i-title">{ currentMovie.title }</p>
 
-                            {/* <div className = "mc-favourite-container"> */}
                             <div className = "i-thumb">
                                 <img 
                                     src = {currentMovie.isFavourite ? thumbsFull : thumbsEmpty} 
@@ -79,9 +76,6 @@ const Individual = () => {
     };
 
     
-    // <>
-    //     <IndividualMovie />
-    // </>
     return(
         <IndividualMovie />
     );

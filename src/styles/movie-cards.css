@@ -1,7 +1,22 @@
 
 .mc-frame {
-    border: 1px solid greenyellow;
     border-radius: 8px;
+}
+
+.mc-frame-color1 {
+    border: 1px solid darkmagenta;
+}
+.mc-frame-color2 {
+    border: 1px solid darkcyan;
+}
+.mc-frame-color3 {
+    border: 1px solid darkolivegreen;
+}
+.mc-frame-color4 {
+    border: 1px solid crimson;
+}
+.mc-frame-color5 {
+    border: 1px solid orange;
 }
 
 .mc-top-container {
@@ -27,7 +42,7 @@ figure > img {
 }
 
 .mc-info-box {
-    font-family: 'Roboto';font-size: 18px;
+    font-family: 'Roboto';font-size: 15px;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -44,7 +59,7 @@ figure > img {
     justify-content: center;
 }
 
-.mc-rating-container > span {
+.mc-percentage {
     margin-left: 0.5rem;
 }
 
@@ -108,3 +123,4 @@ figure > img {
     background-color: red;
     /* display: none; */
 }
+

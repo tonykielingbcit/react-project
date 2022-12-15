@@ -50,11 +50,25 @@ const MovieCards = ({movie, index}) => {
     };
 
 
-    const Card = () => {    
+    const Card = () => {
+        let borderColor;
+        const RatingDecimal = movie.vote_average * 10 % 10;
+
+        if (RatingDecimal >= 0 && RatingDecimal <= 1)
+            borderColor = "mc-frame-color1";
+        else if (RatingDecimal >= 2 && RatingDecimal <= 3)
+            borderColor = "mc-frame-color2";
+        else if (RatingDecimal >= 4 && RatingDecimal <= 5)
+            borderColor = "mc-frame-color3";
+        else if (RatingDecimal >= 6 && RatingDecimal <= 7)
+            borderColor = "mc-frame-color4";
+        else if (RatingDecimal >= 8 && RatingDecimal <= 9)
+            borderColor = "mc-frame-color5";
+
         return (
             <section 
                 key = { index }
-                className = {"mc-frame"}
+                className = {`mc-frame ${borderColor}`}
             >
                 <div className = "mc-top-container">
                     <Link 
@@ -79,8 +93,8 @@ const MovieCards = ({movie, index}) => {
                                 size={25}
                             />
                             <span 
-                                // title = {`${movieItems.vote_average} out of 10 rating`}
                                 title = "Rating"
+                                className = "mc-percentage"
                             >
                                     { `${movieItems.vote_average * 10}%`}
                             </span>
