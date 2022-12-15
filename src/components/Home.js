@@ -19,10 +19,6 @@ const LIST_OF_OPTIONS = [
         url: `https://api.themoviedb.org/3/movie/top_rated?api_key=${env.TMDB_KEY}&language=en-US&page=1`
     },
     {
-        // label: "RECENTLY RELEASED",
-        // url: "https://developers.themoviedb.org/3/movies/get-latest-movie"
-        // url: `https://api.themoviedb.org/3/movie/latest?api_key=${env.TMDB_KEY}&language=en-US`
-        
         // https://developers.themoviedb.org/3/movies/get-now-playing
         key: 2,
         label: "Now Playing",
@@ -46,13 +42,16 @@ const Home = () => {
     // it fetches new movie list 
     // and update the variable responsable to hold them (titles)
     const fetchMovies = async(url) => {
-        const getMovies = await fetch(url)
-            .then((response) => response.json());
-            // (`https://api.themoviedb.org/3/movie/popular?api_key=${env.TMDB_KEY}&language=en-US&page=1`)
+        try {
+            const getMovies = await fetch(url)
+                .then((response) => response.json());
+
+            return getMovies.results;
+        } catch (err) {
+            console.log("###ERROR on fetching data: ", err.message || err);
+            return [];
+        }
         
-        // console.log("url:: ", url, getMovies.results.length);
-        return getMovies.results;
-        // setTitles(getMovies.results);
     };
 
 
@@ -114,7 +113,7 @@ const Home = () => {
     const handleMovieListOptions = async(ev) => {
         const tempObjectOption = LIST_OF_OPTIONS.filter(e => e.label === ev.target.value)[0];
         const movies = await fetchMovies(tempObjectOption.url);
-        console.log("changemenu - movies", tempObjectOption.url, movies);
+        
         setTitles(movies);
         setDropdownOptions(LIST_OF_OPTIONS.filter(e => e.label !== ev.target.value));
         setCurrentDropDownOption(tempObjectOption);
