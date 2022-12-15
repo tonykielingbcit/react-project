@@ -6,6 +6,7 @@
     background-color: rgba(0,0,0,.85);
     background-blend-mode: multiply;
     color: wheat;
+    /* margin-top: calc(3rem + 8px); */
 }
 
 .i-info-container {

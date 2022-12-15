@@ -12,8 +12,8 @@ import PageNotFound from "./components/PageNotFound.js";
 function AppRouter() {
   return (
     <BrowserRouter>
-      <div className="wrapper">
         <Header />
+        <div className="wrapper">
           <Routes>
             <Route path="/" exact element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -24,6 +24,19 @@ function AppRouter() {
         <Footer />
       </div>
     </BrowserRouter>
+    // <BrowserRouter>
+    //   <div className="wrapper">
+    //     <Header />
+    //       <Routes>
+    //         <Route path="/" exact element={<Home />} />
+    //         <Route path="/about" element={<About />} />
+    //         <Route path="/favourites" element={<Favourites />} />
+    //         <Route path="/individual/:id" element={<Individual />} />
+    //         <Route path="*" element={<PageNotFound />} />
+    //       </Routes>
+    //     <Footer />
+    //   </div>
+    // </BrowserRouter>
   );
 }
 

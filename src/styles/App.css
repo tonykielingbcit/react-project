@@ -16,7 +16,6 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    /* border: 2px solid red; */
 }
 
 img {
@@ -27,7 +26,9 @@ img {
 .wrapper {
   text-align: center;
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  margin-top: calc(3rem);
+  min-height: calc(100vh - (3rem + 3px));
   display: flex;
   flex-direction: column;
   align-items: center;

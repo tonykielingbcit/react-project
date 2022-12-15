@@ -1,5 +1,5 @@
 import "../styles/header.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
 
@@ -12,6 +12,11 @@ const Header = () => {
             </section>
             <section className="right-side">
                 <Link to = "/about" className = "single-item">About</Link>
+                {/* <NavLink
+                    to = "/about"
+                >
+                    About
+                </NavLink> */}
             </section>
         </header>
     );

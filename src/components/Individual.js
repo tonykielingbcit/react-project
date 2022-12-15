@@ -78,53 +78,12 @@ const Individual = () => {
             );
     };
 
-
+    
+    // <>
+    //     <IndividualMovie />
+    // </>
     return(
-        <>
-            <IndividualMovie />
-            {/* <section 
-                className = "i-container"
-                style={{
-                    backgroundImage: `url(${backdrop_path})`,
-                    backgroundPosition: 'center',
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat'
-                }}
-            >
-                <div className = "i-info-container">
-                    <div>
-                        <p className = "i-title">{ title }</p>
-                        <div className = "mc-favourite-container">
-                            <img 
-                                src = {isFavourite ? thumbsFull : thumbsEmpty} 
-                                alt = "Click to favorite a movie"
-                                title = {`Click to ${isFavourite ? 'un' : ''}favorite this movie`}
-                                onClick = {() => favoriteAMovie() }
-                            />
-                        </div>
-                    </div>
-
-                    <div className = "i-info-sub-container">
-                        <div>
-                            <p className = "i-titles">Overall rating</p>
-                            <p>{ `${vote_average * 10}%` }</p>
-                        </div>
-
-                        <div>
-                            <p className = "i-titles">Released at</p>
-                            <p>{ release_date }</p>
-                        </div>
-                    </div>
-
-                    <p className = "i-titles">Movie's plot</p>
-                    <p className = "i-movie-plot">{ overview }</p>
-                </div>
-
-                <figure className = "i-image-container">
-                    <img src = {poster_path} alt={title} />
-                </figure>
-            </section> */}
-        </>
+        <IndividualMovie />
     );
 }
 
