@@ -30,8 +30,22 @@ figure > img {
     font-family: 'Roboto';font-size: 18px;
     width: 50%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* border: 1px solid lime; */
+}
+
+.mc-rating-container {
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mc-rating-container > span {
+    margin-left: 0.5rem;
 }
 
 .mc-info-items-title {
@@ -40,6 +54,15 @@ figure > img {
 
 .mc-info-box-items {
 
+}
+
+.mc-favourite-container {
+    height: 25px;
+    width: 100%;
+}
+
+.mc-favourite-container > img {
+    height: 100%;
 }
 
 .mc-item-description {
@@ -67,14 +90,21 @@ figure > img {
     margin-bottom: 1rem;
     border-radius: 8px;
     border: none;
-    color: crimson;
+    /* color: crimson; */
 }
 
 .mc-button-link:hover {
-    color: crimson
+    /* color: crimson */
+    color: gold
 }
 
 .mc-button:hover {
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
+    background-color: blue;
     border: none;
+}
+
+.rating-tooltip {
+    background-color: red;
+    /* display: none; */
 }

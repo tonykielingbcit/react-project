@@ -4,17 +4,17 @@
     display: grid;
     grid-gap: 2rem;
     margin-inline: auto;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (min-width: 790px) {
     .hm-cards-frame {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (min-width: 1050px) {
     .hm-cards-frame {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
     }
 }

@@ -6,12 +6,12 @@ const Header = () => {
     return(
         <header>
             <section className = "left-side">
-                <Link to = "/" className = "single-item">Home</Link>
-                <Link to = "favourites" className = "single-item">My Favourites</Link>
-                {/* <Link to = "individual" className = "single-item">Individual Title</Link> */}
+                {/* <Link to = "/" className = "single-item">Home</Link> */}
+                <a href="/" className = "single-item">Home</a>
+                <Link to = "/favourites" className = "single-item">My Favourites</Link>
             </section>
             <section className="right-side">
-                <Link to = "about" className = "single-item">About</Link>
+                <Link to = "/about" className = "single-item">About</Link>
             </section>
         </header>
     );
