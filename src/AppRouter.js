@@ -1,5 +1,5 @@
 import './styles/App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
@@ -11,7 +11,7 @@ import PageNotFound from "./components/PageNotFound.js";
 
 function AppRouter() {
   return (
-    <BrowserRouter>
+    <HashRouter>
         <Header />
         <div className="wrapper">
           <Routes>
@@ -23,7 +23,7 @@ function AppRouter() {
           </Routes>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
