@@ -9,18 +9,20 @@ const Header = () => {
         <header>
             <section className = "left-side">
                 <a 
-                    href="/"
+                    href="/react-project"
                     title = "Home"
                 >
                     {/* https://iconarchive.com/show/hobbies-icons-by-hadezign/Movies-icon.html */}
                     <figure className = "icon-container">
-                        <img src={Icon} alt = "Site's icon"/>
+                        <img 
+                            src = { Icon } 
+                            alt = "Site's icon"/>
                     </figure>
                 </a> 
                 
                 <a 
-                    href="/" 
-                    className = {`single-item ${(currentLocation === "/" ? "is-active" : "")}`}
+                    href="/react-project" 
+                    className = {`single-item ${(currentLocation === "/react-project" ? "is-active" : "")}`}
 
                 >
                     Home

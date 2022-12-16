@@ -1,5 +1,5 @@
 import './styles/App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
@@ -11,19 +11,20 @@ import PageNotFound from "./components/PageNotFound.js";
 
 function AppRouter() {
   return (
-    <BrowserRouter>
+    <HashRouter>
         <Header />
         <div className="wrapper">
           <Routes>
             <Route path="/" exact element={<Home />} />
+            <Route path="/react-project" exact element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/favourites" element={<Favourites />} />
             <Route path="/individual/:id" element={<Individual />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
-        <Footer />
-      </div>
-    </BrowserRouter>
+          <Footer />
+        </div>
+    </HashRouter>
   );
 }
 

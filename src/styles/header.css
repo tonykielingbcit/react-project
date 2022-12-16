@@ -42,14 +42,56 @@ header {
 
 .icon-container {
     display: flex;
-    /* justify-content: center; */
     height: 100%;
     margin: 0 1rem;
     padding: 0;
-    /* border: 1px solid red; */
     -webkit-transform:rotate(340deg);
     -moz-transform: rotate(340deg);
     -ms-transform: rotate(340deg);
     -o-transform: rotate(340deg);
     transform: rotate(340deg);
 }
+
+.icon-container > img:hover {
+    animation-name: icon-move;
+    animation-duration: 3s;
+}
+
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation3 */
+@keyframes icon-move {
+    0%   {
+        -webkit-transform:rotate(340deg);
+        -moz-transform: rotate(340deg);
+        -ms-transform: rotate(340deg);
+        -o-transform: rotate(340deg);
+        transform: rotate(340deg);
+    }
+    25%  {
+        -webkit-transform:rotate(350deg);
+        -moz-transform: rotate(350deg);
+        -ms-transform: rotate(350deg);
+        -o-transform: rotate(350deg);
+        transform: rotate(350deg);
+    }
+    50%  {
+        -webkit-transform:rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    75%  {
+        -webkit-transform:rotate(350deg);
+        -moz-transform: rotate(350deg);
+        -ms-transform: rotate(350deg);
+        -o-transform: rotate(350deg);
+        transform: rotate(350deg);
+    }
+    100% {
+        -webkit-transform:rotate(340deg);
+        -moz-transform: rotate(340deg);
+        -ms-transform: rotate(340deg);
+        -o-transform: rotate(340deg);
+        transform: rotate(340deg);
+    }
+  }
