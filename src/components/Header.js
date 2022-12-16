@@ -9,7 +9,7 @@ const Header = () => {
         <header>
             <section className = "left-side">
                 <a 
-                    href="/react-project"
+                    href="/"
                     title = "Home"
                 >
                     {/* https://iconarchive.com/show/hobbies-icons-by-hadezign/Movies-icon.html */}
@@ -19,8 +19,8 @@ const Header = () => {
                 </a> 
                 
                 <a 
-                    href="/react-project" 
-                    className = {`single-item ${(currentLocation === "/react-project" ? "is-active" : "")}`}
+                    href="/" 
+                    className = {`single-item ${(currentLocation === "/" ? "is-active" : "")}`}
 
                 >
                     Home

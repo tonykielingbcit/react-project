@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter } from 'react-router-dom';
-// import './index.css';
+// import { HashRouter } from 'react-router-dom';
 import AppRouter from './AppRouter';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HashRouter>
+    {/* <HashRouter> */}
       <AppRouter />
-    </HashRouter>
+    {/* </HashRouter> */}
   </React.StrictMode>
 );
 

@@ -15,7 +15,7 @@ function AppRouter() {
         <Header />
         <div className="wrapper">
           <Routes>
-            <Route path="/react-project" exact element={<Home />} />
+            <Route path="/" exact element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/favourites" element={<Favourites />} />
             <Route path="/individual/:id" element={<Individual />} />
