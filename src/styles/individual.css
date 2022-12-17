@@ -49,8 +49,9 @@
 
 .i-thumb {
     /* border: 1px solid blue; */
-    font-size: 25px;
-    height: 30%;
+    /* font-size: 25px;
+    height: 30%; */
+    width: 35px;
 }
 
 .i-thumb > img {
@@ -85,10 +86,5 @@
 
     .i-image-container {
         display: flex;
-    }
-    .i-movie-plot {
-        margin: 0;
-        width: 70%;
-        line-height: 2.5rem;
     }
 }
