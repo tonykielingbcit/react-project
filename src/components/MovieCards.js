@@ -51,19 +51,17 @@ const MovieCards = ({movie, index}) => {
 
 
     const Card = () => {
-        let borderColor;
+        // pick border card color based on its decimal vote_rating
         const RatingDecimal = movie.vote_average * 10 % 10;
-
-        if (RatingDecimal >= 0 && RatingDecimal <= 1)
-            borderColor = "mc-frame-color1";
-        else if (RatingDecimal >= 2 && RatingDecimal <= 3)
-            borderColor = "mc-frame-color2";
-        else if (RatingDecimal >= 4 && RatingDecimal <= 5)
-            borderColor = "mc-frame-color3";
-        else if (RatingDecimal >= 6 && RatingDecimal <= 7)
-            borderColor = "mc-frame-color4";
-        else if (RatingDecimal >= 8 && RatingDecimal <= 9)
-            borderColor = "mc-frame-color5";
+        const short = RatingDecimal % 5;
+        const classBorderColor = {
+            0: "mc-frame-color1",
+            1: "mc-frame-color2",
+            2: "mc-frame-color3",
+            3: "mc-frame-color4",
+            4: "mc-frame-color5"
+        }
+        const borderColor = classBorderColor[short] ?? "mc-frame-color4";  // just in case it's going to be 4
 
         return (
             <section 
