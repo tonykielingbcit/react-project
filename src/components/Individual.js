@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Navigate } from "react-router-dom";
 import "../styles/individual.css";
 import { addMovieToLocalStorage, removeMovieFromLocalStorage } from "../helpers.js/handleLocalStorage";
 import thumbsEmpty from "../graphics/thumbs-up-empty-1.png";
@@ -7,12 +7,15 @@ import { useState } from "react";
 
 const Individual = () => {
     const location = useLocation();
-    const { movie } = location.state;
+    const { movie } = location.state || {};
     const [currentMovie, setCurrentMovie] = useState(null);
+
+
 
     useState(() => {
         setCurrentMovie(movie);
     }, []);
+
 
 
     const favoriteAMovie = () => {
@@ -25,6 +28,8 @@ const Individual = () => {
             addMovieToLocalStorage(newObject);
         }
     }
+
+
 
     const IndividualMovie = () => {
         if (currentMovie)
@@ -73,6 +78,9 @@ const Individual = () => {
                     </figure>
                 </section>
             );
+
+        else
+            return <Navigate to = "/error" />;
     };
 
     

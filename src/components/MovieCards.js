@@ -114,9 +114,15 @@ const MovieCards = ({movie, index}) => {
                 </div>
 
                 <div>
-                    <p className = "mc-item-description">
-                        { movieItems.overview }
-                    </p>
+                    <Link 
+                        to = {`/individual/${movie.id}`}
+                        state = {{ movie: movieItems }}
+                        className = "mc-button-link"
+                    >
+                        <p className = "mc-item-description">
+                            { movieItems.overview }
+                        </p>
+                    </Link>
                     
                     <button className = "mc-button">
                         <Link 
