@@ -50,20 +50,3 @@ const Favourites = () => {
 }
 
 export default Favourites;
-
-/*
-"[
-    {
-        "date":"Oct 19, 2022",
-        "poster":"https://image.tmdb.org/t/p/w500/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg",
-        "title":"Black Adam",
-        "excerpt":"Nearly 5,000 years after he was bestowed with the almighty powers of ...",
-        "overview":"Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.",
-        "id":436270,
-        "rate":7.3,
-        "bgimg":"https://image.tmdb.org/t/p/w1280/bQXAqRx2Fgc46uCVWgoPz5L5Dtr.jpg",
-        "genres":" Action, Fantasy, Science Fiction",
-        "rateStars":"/movie-app-01/assets/images/four.png"
-    }
-]"
-*/

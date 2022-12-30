@@ -4,8 +4,7 @@ const Footer = () => {
 
     return(
         <footer>
-            &#174; BCIT React Assignment - 2022
-            {/* add credit Link right here */}
+            &#174; BCIT - Software Systems Developer (Web Programmer Option) - React Assignment - 2022
         </footer>
     );
 }

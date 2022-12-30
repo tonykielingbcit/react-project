@@ -14,8 +14,6 @@ header {
 
 .left-side, .right-side {
     display: flex;
-    /* margin: 0 1rem; */
-    /* border: lime 1px solid; */
 }
 
 .single-item {

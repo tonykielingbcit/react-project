@@ -1,5 +1,9 @@
 {
   "name": "react-project",
+  "author": "Tony Kieling",
+  "contributors": [
+    "Ginni Chopra"
+  ],
   "version": "0.1.0",
   "private": true,
   "dependencies": {

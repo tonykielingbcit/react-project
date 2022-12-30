@@ -21,7 +21,6 @@ const MovieCards = ({movie, index}) => {
 
 
     useEffect(() => {
-        // console.log("movie: ", movie);
         const tempMovie = ({
             id: movie.id,
             poster_path: movie.poster_path,
@@ -149,13 +148,3 @@ const MovieCards = ({movie, index}) => {
 
 
 export default MovieCards;
-
-// Each movie should display the following information:
-//  The movie’s poster
-// • If a poster is not available, then you should load a generic placeholder image
-//  The movie’s title
-//  The movie’s release date
-//  The movie’s rating (review rating – example: 67%)
-//  A short summary about the movie
-//  A “More Info” button that the user can click on to get additional information on the individual movie page
-// • Optionally the entire movie listing can be clickable to the individual movie page

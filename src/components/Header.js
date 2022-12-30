@@ -20,7 +20,6 @@ const Header = () => {
                 
                 <a 
                     href="/" 
-                    // className = {`single-item ${(currentLocation === "/" ? "is-active" : "")}`}
                     className = {`single-item display-home ${(currentLocation === "/react-project" ? "is-active" : "")}`}
                 >
                     Home

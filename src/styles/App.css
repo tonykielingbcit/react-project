@@ -26,7 +26,6 @@ img {
 .wrapper {
   text-align: center;
   background-color: #282c34;
-  /* min-height: 100vh; */
   filter: brightness(120%);
   margin-top: calc(3rem);
   min-height: calc(100vh - (3rem + 3px));
